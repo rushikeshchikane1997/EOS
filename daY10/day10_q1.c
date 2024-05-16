@@ -40,7 +40,7 @@ int main() {
         printf("Child: numbers sent: %d, %d\n", m1.data[0], m1.data[1]);
 
         // Receive the sum from the parent
-        msg_t m3;
+       msg_t m3;
         ret = msgrcv(mqid, &m3, sizeof(m3.data), 2, 0);
         if(ret < 0) {
             perror("msgrcv() failed");
